@@ -1,8 +1,5 @@
-const ConvertLib = artifacts.require("ConvertLib");
-const MetaCoin = artifacts.require("MetaCoin");
+var HedgeToken = artifacts.require("HedgeToken");
 
-module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
+module.exports = function (deployer) {
+  deployer.deploy(HedgeToken, "21000000000000000000000000", { gas: 2100000000 });
 };
