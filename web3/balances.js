@@ -1,9 +1,7 @@
 const Web3 = require('web3');
-
-// Variables definition
-const addressFrom = '0x6Be02d1d3665660d22FF9624b7BE0551ee1Ac91b';
+const addressFrom = '0x19e7e376e7c213b7e7e7e46cc70a5dd086daff2a';
 const addressTo = '0x6bB5423f0Dd01B8C5028a1bc01e1f1bDe4523e72';
-const web3 = new Web3('http://127.0.0.1:9933');
+const web3 = new Web3('http://localhost:9933/');
 
 // Balance call
 const balances = async () => {
