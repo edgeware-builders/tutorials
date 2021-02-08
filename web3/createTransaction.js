@@ -12,16 +12,12 @@ const deploy = async () => {
     `Attempting to make transaction from ${addressFrom} to ${addressTo}`
   );
 
-  const transactionArgs = {
-    from: addressFrom,
-    to: addressTo,
-    value: web3.utils.toWei('1337', 'ether'),
-  };
-  const gas = await web3.eth.estimateGas(transactionArgs);
   const createTransaction = await web3.eth.accounts.signTransaction(
     {
-      ...transactionArgs,
-      gas,
+      from: addressFrom,
+      to: addressTo,
+      value: web3.utils.toWei('1337', 'ether'),
+      gas: 21000,
     },
     privKey
   );
